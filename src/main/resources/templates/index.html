@@ -1,323 +1,303 @@
-
 <!DOCTYPE html>
-
 <html xmlns:th="http://www.thymeleaf.org" lang="ru">
 <head>
-
-<!-- Meta Tags -->
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="yandex-verification" content="3c71d04ea694a40c" />
-<!--<link rel="canonical" href="https://eda-studio.ru"/> -->
-<link rel="shortcut icon" th:href="@{stiles/img/favicon.ico}" type="image/x-icon">
-
-<title>Evil | Dizz | Art</title>
-
-<meta name="description" content="Перевод приложений от Xiaomi и не только" />
-
-<!-- Mobile Specifics -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="HandheldFriendly" content="true"/>
-<meta name="MobileOptimized" content="320"/>
-
-<!-- Mobile Internet Explorer ClearType Technology -->
-<!--[if IEMobile]>  <meta http-equiv="cleartype" content="on">  <![endif]-->
-
-<!-- Bootstrap -->
-<!-- <link rel="canonical" href="https://…"/>  -->
-<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
-
-<!-- Main Style -->
-<link  th:href="@{/css/main.css}" rel="stylesheet">
-
-<!-- Supersized -->
-<link  th:href="@{/css/supersized.css}" rel="stylesheet">
-<link  th:href="@{/css/supersized.shutter.css}" rel="stylesheet">
-
-<!-- FancyBox -->
-<link  th:href="@{/css/fancybox/jquery.fancybox.css}" rel="stylesheet">
-
-<!-- Font Icons -->
-<link  th:href="@{/css/fonts.css}" rel="stylesheet">
-
-<!-- Shortcodes -->
-<link  th:href="@{/css/shortcodes.css}" rel="stylesheet">
-
-<!-- Responsive -->
-<link  th:href="@{/css/bootstrap-responsive.min.css}" rel="stylesheet">
-<link  th:href="@{/css/responsive.css}" rel="stylesheet">
-
-<!-- Supersized -->
-<link  th:href="@{/css/supersized.css}" rel="stylesheet">
-<link  th:href="@{/css/supersized.shutter.css}" rel="stylesheet">
-
-<!-- Google Font -->
-<link href='//fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
-
-<!-- Fav Icon -->
-<link rel="shortcut icon" href="#">
-
-<link rel="apple-touch-icon" href="#">
-<link rel="apple-touch-icon" sizes="114x114" href="#">
-<link rel="apple-touch-icon" sizes="72x72" href="#">
-<link rel="apple-touch-icon" sizes="144x144" href="#">
-
-
-<!-- Js -->
-<script th:src="@{//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js}"></script> <!-- jQuery Core -->
-<script th:src="@{/js/bootstrap.min.js}"></script> <!-- Bootstrap -->
-<script th:src="@{/js/supersized.3.2.7.min.js}"></script> <!-- Slider -->
-<script th:src="@{/js/waypoints.js}"></script> <!-- WayPoints -->
-<script th:src="@{/js/waypoints-sticky.js}"></script> <!-- Waypoints for Header -->
-<script th:src="@{/js/jquery.isotope.js}"></script> <!-- Isotope Filter -->
-<script th:src="@{/js/jquery.fancybox.pack.js}"></script> <!-- Fancybox -->
-<script th:src="@{/js/jquery.fancybox-media.js}"></script> <!-- Fancybox for Media -->
-<script th:src="@{/js/jquery.tweet.js}"></script> <!-- Tweet -->
-<script th:src="@{/js/plugins.js}"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script th:src="@{/js/main.js}"></script> <!-- Default JS -->
-<!-- End Js -->
-<!-- Modernizr -->
-<script th:src="@{/js/modernizr.js}"></script>
-
-<!-- Analytics -->
-<script type="text/javascript">
-
-
-</script>
-<script th:src="@{stiles/js/down.js}"></script>
-<!-- End Analytics -->
-
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="yandex-verification" content="3c71d04ea694a40c" />
+    <!--<link rel="canonical" href="https://eda-studio.ru"/> -->
+    <link rel="shortcut icon" th:href="@{stiles/img/favicon.ico}" type="image/x-icon">
+    <title>Evil | Dizz | Art</title>
+    <meta name="description" content="Перевод приложений от Xiaomi и не только" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="320"/>
+    <meta http-equiv="cleartype" content="on">
+    <link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/css/main.css}" rel="stylesheet">
+    <link th:href="@{/css/supersized.css}" rel="stylesheet">
+    <link th:href="@{/css/supersized.shutter.css}" rel="stylesheet">
+    <link th:href="@{/css/fancybox/jquery.fancybox.css}" rel="stylesheet">
+    <link th:href="@{/css/fonts.css}" rel="stylesheet">
+    <link th:href="@{/css/shortcodes.css}" rel="stylesheet">
+    <link th:href="@{/css/bootstrap-responsive.min.css}" rel="stylesheet">
+    <link th:href="@{/css/responsive.css}" rel="stylesheet">
+    <link th:href="@{/css/supersized.css}" rel="stylesheet">
+    <link th:href="@{/css/supersized.shutter.css}" rel="stylesheet">
+    <link href='//fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="#">
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+    <script th:src="@{//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js}"></script> <!-- jQuery Core -->
+    <script th:src="@{/js/bootstrap.min.js}"></script> <!-- Bootstrap -->
+    <script th:src="@{/js/supersized.3.2.7.min.js}"></script> <!-- Slider -->
+    <script th:src="@{/js/waypoints.js}"></script> <!-- WayPoints -->
+    <script th:src="@{/js/waypoints-sticky.js}"></script> <!-- Waypoints for Header -->
+    <script th:src="@{/js/jquery.isotope.js}"></script> <!-- Isotope Filter -->
+    <script th:src="@{/js/jquery.fancybox.pack.js}"></script> <!-- Fancybox -->
+    <script th:src="@{/js/jquery.fancybox-media.js}"></script> <!-- Fancybox for Media -->
+    <script th:src="@{/js/jquery.tweet.js}"></script> <!-- Tweet -->
+    <script th:src="@{/js/plugins.js}"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+    <script th:src="@{/js/main.js}"></script> <!-- Default JS -->
+    <script th:src="@{/js/modernizr.js}"></script>
+    <script type="text/javascript"></script>
+    <script th:src="@{stiles/js/down.js}"></script>
 </head>
-
 
 <body>
 
-<!-- This section is for Splash Screen -->
-<div class="ole">
-<section id="jSplash">
-	<div id="circle"></div>
-</section>
-</div>
-<!-- End of Splash Screen -->
-
-<!-- Homepage Slider -->
-<!--<div id="home-slider">-->
-<!--    <div class="overlay"></div>-->
-
-<!--    <div class="slider-text">-->
-<!--    	<div id="slidecaption">EDA STUDIO</div>-->
-<!--    </div>-->
-
-<!--	<div class="control-nav">-->
-<!--        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>-->
-<!--        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>-->
-<!--        <ul id="slide-list"></ul>-->
-
-<!--        <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>-->
-<!--    </div>-->
-<!--</div>-->
-<!-- End Homepage Slider -->
-
-<!-- Header -->
-<header>
-    <div class="sticky-nav">
-    	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
-
-        <div id="logo">
-        	<a id="goUp" href="#home-slider" title="ss | Responsive One Page Template">Art</a>
-        </div>
-
-        <nav id="menu">
-        	<ul id="menu-nav">
-            	<li class="current"><a href="#home-slider">Главная</a></li>
-<!--                <li><a href="#projects">Приложения</a></li>-->
-                <li><a href="#about">О нас</a></li>
-<!--                <li><a href="#contact">Контакты</a></li>-->
-<!--                <li><a href="#video">Видео</a></li>-->
-<!--				<li><a href="/login.php" class="external">ВХОД</a></li>-->
-            </ul>
-        </nav>
-
+    <div class="ole">
+        <section id="jSplash">
+            <div id="circle"></div>
+        </section>
     </div>
-</header>
 
+    <header>
+        <div class="sticky-nav">
+    	    <a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
+            <div id="logo">
+        	    <a id="goUp" href="#home-slider" title="ss | Responsive One Page Template">Art</a>
+            </div>
 
+            <nav id="menu">
+        	    <ul id="menu-nav">
+            	    <li class="current"><a href="#home-slider">Главная</a></li>
+                    <li><a href="#projects">Приложения</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li>
+<!--                        <a href="">Корзина</a>-->
+                        <img width="40" height="40" th:src="@{/img/Basket.png}">
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<!-- About Section -->
-<div id="about" class="page-alternate">
-<div class="container">
-    <!-- Title Page -->
     <div class="row">
         <div class="span12">
             <div class="title-page">
-                <h2 class="title">О нас</h2>
-                <h3 class="title-description">Качественные переводы и эксклюзив.</h3>
+                <h2 class="title">Приложения</h2>
+                <!--<h3 class="title-description">Найдите интересующее приложение или <a href="#">ПЛАГИН</a>.</h3>!-->
             </div>
         </div>
     </div>
-    <!-- End Title Page -->
 
-    <!-- People -->
     <div class="row">
-
-        <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Переводчик</span>
-                </div>
-                <img src="stiles/img/profile/profile-01.jpg" alt="EvilGoodd">
-            </div>
-            <h3 class="profile-name">EvilGoodd</h3>
-            <p class="profile-description">Качественный перевод приложений и прошивок</p>
-            <div class="social">
-            	<ul class="social-icons">
-
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-
-        <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Программист</span>
-                </div>
-                <img src="stiles/img/profile/profile-02.jpg" alt="Jane Helf">
-            </div>
-            <h3 class="profile-name">Dizz74</h3>
-            <p class="profile-description">Оптимизация, разработка приложений</p>
-            <div class="social">
-            	<ul class="social-icons">
-
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-
-        <!-- Start Profile -->
-    	<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Основатель</span>
-                </div>
-                <img src="stiles/img/profile/profile-03.jpg" alt="ArturioS">
-            </div>
-            <h3 class="profile-name">ArturioS</h3>
-            <p class="profile-description">Оптимизация, разработка приложений</p>
-
-            <div class="social">
-            	<ul class="social-icons">
-                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-
-                    <li><a href="https://plus.google.com/u/0/101087197141648008575"><i class="font-icon-social-google-plus"></i></a></li>
-                    <li><a href="https://www.facebook.com/profile.php?id=100005240070201"><i class="font-icon-social-facebook"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-
-    </div>
-    <!-- End People -->
-</div>
-</div>
-<!-- End About Section -->
-
-
-<!-- Contact Section -->
-<div id="contact" class="page">
-<div class="container">
-    <!-- Title Page -->
-<!--    <div class="row">-->
-<!--        <div class="span12">-->
-<!--            <div class="title-page">-->
-<!--                <h2 class="title">Хотели что-то спросить?</h2>-->
-<!--                <h3 class="title-description">Заказать перевод или услугу? Пишите и мы Вам ответим</h3>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-    <!-- End Title Page -->
-
-    <!-- Contact Form -->
-    <div class="row">
-<!--    	<div class="span9">-->
-
-<!--        	<form id="contact-form" class="contact-form" action="#">-->
-<!--            	<p class="contact-name">-->
-<!--            		<input id="contact_name" type="text" placeholder="Ваше имя" value="" name="name" />-->
-<!--                </p>-->
-<!--                <p class="contact-email">-->
-<!--                	<input id="contact_email" type="text" placeholder="Ваш E-mail" value="" name="email" />-->
-<!--                </p>-->
-<!--                <p class="contact-message">-->
-<!--                	<textarea id="contact_message" placeholder="Ваше сообщение" name="message" rows="15" cols="40"></textarea>-->
-<!--                </p>-->
-<!--                <p class="contact-submit">-->
-<!--                	<a id="contact-submit" class="submit" href="#">Отправить</a>-->
-<!--                </p>-->
-
-<!--                <div id="response">-->
-
-<!--                </div>-->
-<!--            </form>-->
-
-<!--        </div>-->
-
         <div class="span3">
-        	<div class="contact-details">
-        		<h3>Контакты</h3>
-                <ul>
-                    <li><a href="#">maltcev-artur@yandex.ru</a></li>
-                    <li></li>
-                    <li>
-                        EDA
-                        <br>
-                        Studio
-                        <br>
-
-                    </li>
+            <nav id="options" class="work-nav">
+                <ul id="filters" class="option-set" data-option-key="filter">
+                    <li class="type-work"></li>
+                    <li><a href="#filter" data-option-value="*" class="selected">Все приложения</a></li>
+                    <li><a href="#filter" data-option-value=".auto">Автоматизация</a></li>
+                    <li><a href="#filter" data-option-value=".cam">Камеры</a></li>
                 </ul>
+            </nav>
+        </div>
+        <div class="span9">
+            <div class="row">
+                <section id="projects">
+                    <ul id="thumbs">
+                        <div>
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" name="SmartHome" title="Умный дом (Mijia Home)" th:href="@{/img/work/full/SmartHome.png}" file="" vername="Стабильную версию: " ver="" vername2="Версия: " file2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_9 font-icon-SmartHome"></span>
+                                </a>
+                                <img  th:src="@{/img/work/thumbs/Mijia_Home.png}" alt="Управление устройствами Xiaomi. <a>Отличия от оригинала:</a> Частично реализован перевод сценариев и статусов устройств, в процессе перевод уведомлений. Для замены плагинов ROOT не требуется! Путь для замены плагинов: <au>Внутренняя память/EDA/plugin/install/mpk/№ папки</au> </br><au><a>Тестовая версия на канале Telegram: ></a></au>" >
+                            </li>
+
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" name="SmartHomePlugin" title="Плагины для Умного дома" th:href="@{/img/work/full/plugin_background2.jpg}" file="" vername="плагины" ver="" file2="" vername2="плагины" ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_7 font-icon-SmartHomePlugin"></span>
+                                </a>
+                                <img  th:src="@{/img/work/thumbs/plugin_3.png}" alt="Плагины для различных устройств в Умном доме. Путь для замены плагинов: <au>Внутренняя память/EDA/plugin/install/mpk/№ папки.</au>" >
+                            </li>
+
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yeelight" th:href="@{/img/work/full/Yeelight.png}" file="" vername="Версия: " ver="" vername2="Версия: " file2="" ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_8 font-icon-Yeelight"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/Yeelight.png}" alt="Приложение для управления умными лампами Xiaomi (Yeelight LED (цветная), Yeelight LED (белая), Ночник Yeelight и Настольная лампа Mijia) Полный перевод, включая Помощь и Справку.">
+                            </li>
+
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Mi Роутер" th:href="@{/img/work/full/Mi Router.png}" file="" vername="Девлоперскую версию: " ver="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_9ru font-icon-Mi_Роутер"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/mi_wifi.png}" alt="Приложение для управления роутерами Xiaomi.">
+                            </li>
+
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="ZMI Portable Router" th:href="@{/img/work/full/ZMI Portable Router.png}" file="" vername="Версия: " ver="" vername2="Версия: " file2="" ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_15 font-icon-Portable_Router"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/ZMI.png}" alt="Используйте сим-карту для интернета любого мобильного оператора в своём мобильном роутере ZMI и разделяйте задачи: сим-карта в телефоне – для звонков, сим-карта в роутере – для интернета. К тому же, можно использовать и как портативное зарядное устройство.">
+                            </li>
+
+                            <li class="item-thumbs span3 auto">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="ZMI Smart PowerBank" th:href="@{/img/work/full/ZMI Smart PowerBank.png}" file="" vername="Версия: " ver="" vername2="Версия: " file2="" ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_15 font-icon-Smart_PowerBank"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/ZMI2.png}" alt="Приложение для полного контроля и управления Вашего батарейного блока ZMI.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Home (IP-Камеры)" th:href="@{/img/work/full/Yi Home.png}" file="" vername="Китайскую версию: " ver="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_7 font-icon-Yi_Home"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/YiHome.png}" alt="Приложение для управления умными IP-камерами Xiaomi Mi ants.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Action Camera (Спортивная камера)" th:href="@{/img/work/full/Yi Action Camera.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_16 font-icon-Yi_Action_Camera"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/canera.png}" alt="Данное приложение поможет Вам управлять, снимать, просматривать отснятое видео и фото.
+Существует несколько моделей данной камеры, Отличие на данный момент только в улучшении звука и фокусировки линзы.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Car DVR (Видеорегистратор)" th:href="@{/img/work/full/Yi Car DVR.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_10 font-icon-Yi_Car_DVR"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/MijiaCarCamera.png}" alt="Команда Yi Technology, объединившись с профессионалами из Германии, Тайваня, Китая и Японии, создала умный видеорегистратор, ранее не имевший аналогов по оптимальному соотношению стоимости и производительности.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Yi Halo (VR-Камера)" th:href="@{/img/work/full/Yi Halo.png}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_7 font-icon-Yi_Halo"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/HALO.png}" alt="Бывший партнер Xiaomi, компания Yi Technology сегодня представила Yi Halo – платформу для записи VR-видео. Конструкция состоит из 17 камер Yi 4K Action Camera, а также обладает собственным дисплеем и аккумулятором на 50 Вт для автономной работы.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Видеорегистратор 70MAI Dash Сam" th:href="@{/img/work/full/70_Mai_Car_DVR.jpg}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_12 font-icon-Mai_Car_DVR"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/70MAI Dash Сam.png}" alt="Приложение для управления видеорегистратором 70MAI Dash Сam.">
+                            </li>
+
+                            <li class="item-thumbs span3 cam">
+                                <a class="hover-wrap fancybox" data-fancybox-group="gallery" title="Видеорегистратор Mijia Car Camera" th:href="@{/img/work/full/Mijia_Car_Camera.jpg}" file="" vername="Версия: " ver="" file2="" vername2="Версия: " ver2="">
+                                    <span class="overlay-img"></span>
+                                    <span class="overlay-img-thumb_16 font-icon-Mijia_Car_Camera"></span>
+                                </a>
+                                <img th:src="@{/img/work/thumbs/Mijia_Car_Camera.png}" alt="Приложение для управления видеорегистратором Mijia Car Camera.">
+                            </li>
+                        </div>
+                    </ul>
+                </section>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="about" class="page-alternate">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <div class="title-page">
+                        <h2 class="title">О нас</h2>
+                        <h3 class="title-description">Качественные переводы и эксклюзив.</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+    	        <div class="span4 profile">
+        	        <div class="image-wrap">
+                        <div class="hover-wrap">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-text-thumb">Переводчик</span>
+                        </div>
+                        <img src="stiles/img/profile/profile-01.jpg" alt="EvilGoodd">
+                    </div>
+                        <h3 class="profile-name">EvilGoodd</h3>
+                        <p class="profile-description">Качественный перевод приложений и прошивок</p>
+                        <div class="social">
+            	            <ul class="social-icons"></ul>
+                        </div>
+                </div>
+
+    	        <div class="span4 profile">
+        	        <div class="image-wrap">
+                        <div class="hover-wrap">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-text-thumb">Программист</span>
+                        </div>
+                        <img src="stiles/img/profile/profile-02.jpg" alt="Jane Helf">
+                    </div>
+                    <h3 class="profile-name">Dizz74</h3>
+                    <p class="profile-description">Оптимизация, разработка приложений</p>
+                        <div class="social">
+            	            <ul class="social-icons"></ul>
+                        </div>
+                </div>
+
+    	        <div class="span4 profile">
+        	        <div class="image-wrap">
+                        <div class="hover-wrap">
+                            <span class="overlay-img"></span>
+                            <span class="overlay-text-thumb">Основатель</span>
+                        </div>
+                        <img src="stiles/img/profile/profile-03.jpg" alt="ArturioS">
+                    </div>
+                    <h3 class="profile-name">ArturioS</h3>
+                    <p class="profile-description">Оптимизация, разработка приложений</p>
+                        <div class="social">
+            	            <ul class="social-icons">
+                	            <li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
+                                <li><a href="https://plus.google.com/u/0/101087197141648008575"><i class="font-icon-social-google-plus"></i></a></li>
+                                <li><a href="https://www.facebook.com/profile.php?id=100005240070201"><i class="font-icon-social-facebook"></i></a></li>
+                            </ul>
+                        </div>
+                 </div>
             </div>
         </div>
     </div>
-    <!-- End Contact Form -->
 
-    <!-- Our Shortcodes Section -->
-<div id="shortcodes" class="page">
-    <div class="container">
-
-    <div class="row">
-
-            <div class="span6">
-
-
-                                </div>
-                                 </div>
-                                  </div>
-</div>
-
-
-
-</div>
-
-
-<!-- Footer -->
-<footer>
-	<p class="credits">&copy;EDA Studio 2017  Дизайн картинок:vicing8</p>
-</footer>
-<!-- End Footer -->
-
-<!-- Back To Top -->
-<a id="back-to-top" href="#">
-	<i class="font-icon-arrow-simple-up"></i>
-</a>
-<!-- End Back to Top -->
+    <div id="contact" class="page">
+        <div class="container">
+            <div class="row">
+                <div class="span3">
+        	        <div class="contact-details">
+        		        <h3>Контакты</h3>
+                        <ul><li><a href="#">maltcev-artur@yandex.ru</a></li>
+                            <li></li>
+                            <li>EDA<br>Studio<br></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div id="shortcodes" class="page">
+                <div class="container">
+                    <div class="row">
+                        <div class="span6">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
+    <footer>
+	    <p class="credits">&copy;EDA Studio 2017  Дизайн картинок:vicing8</p>
+    </footer>
 
+    <a id="back-to-top" href="#">
+	    <i class="font-icon-arrow-simple-up"></i>
+    </a>
 
 </body>
 </html>
